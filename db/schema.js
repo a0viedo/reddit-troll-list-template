@@ -1,3 +1,5 @@
+require('dotenv').load();
+
 var Promise = require('bluebird');
 
 var createSchema = function(knex) {

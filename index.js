@@ -1,3 +1,5 @@
+require('dotenv').load();
+
 // Connect to the database
 var knex = require('./db/connect')();
 

@@ -1,16 +1,14 @@
 var knex = require('knex');
 
-var settings = require('../settings');
-
 var connect = function() {
     return knex({
         client: 'postgres',
         debug: true,
         connection: {
-            host: settings.DB_HOST || 'localhost',
-            user: settings.DB_USER,
-            password: settings.DB_PASS,
-            database: 'reddit'
+            host: process.env.DB_HOST || 'localhost',
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            database: process.env.DB_NAME
         }
     });
 };
